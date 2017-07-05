@@ -43,6 +43,7 @@ object AggregationBuilderFn {
 
     // pipeline aggs follow
     case p: AvgBucketDefinition => AvgBucketPipelineBuilder(p).asRight
+    case p: BucketSelectorDefinition => BucketSelectorPipelineBuilder(p).asRight
     case p: CumulativeSumDefinition => CumulativeSumPipelineBuilder(p).asRight
     case p: DerivativeDefinition => DerivativePipelineBuilder(p).asRight
     case p: DiffDefinition => SerialDiffPipelineBuilder(p).asRight
